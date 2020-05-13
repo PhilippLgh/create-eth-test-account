@@ -3,7 +3,7 @@
 ## :unicorn: Fastest way to get setup with Ethereum :unicorn:
 
 ```shell
-npm create ethereum-test-account
+npm create eth-test-account
 ```
 
 ## Generate a pre-funded test account in seconds :rocket:
