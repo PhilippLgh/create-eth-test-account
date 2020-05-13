@@ -1,0 +1,22 @@
+{
+  "name": "create-eth-test-account",
+  "version": "1.0.0",
+  "main": "bin/index.js",
+  "license": "MIT",
+  "author": "Philipp Langhans",
+  "bin": {
+    "create-ethereum-test-account": "./bin/index.js"
+  },
+  "keywords": [
+    "Ethereum",
+    "faucet",
+    "CLI"
+  ],
+  "dependencies": {
+    "axios": "^0.19.2",
+    "chalk": "^4.0.0",
+    "enquirer": "^2.3.5",
+    "ethers": "^4.0.47",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
