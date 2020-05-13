@@ -6,12 +6,17 @@
 npm create eth-test-account
 ```
 
+💸💸💸 Get test Ether for the goerli testnet instantly! 💸💸💸
+
 ## Generate a pre-funded test account in seconds :rocket:
 
 <p align="center"><img src="/img/install.gif?raw=true"/></p>
 
 ###  What is the password?
 >"" (empty string)
+
+### Do I need social media verification to use this?
+> Nope. Hopefully a thing of the past. Might need to adjust CAPCTHAs in the future.
 
 ### Can i sell my test ether?
 > No.
