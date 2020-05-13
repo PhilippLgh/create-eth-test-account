@@ -7,6 +7,7 @@ npm create eth-test-account
 ```
 
 💸💸💸 Get test Ether for the goerli testnet instantly! 💸💸💸
+It uses the faucet at: https://api.ethfaucet.org
 
 ## Generate a pre-funded test account in seconds :rocket:
 
@@ -14,6 +15,7 @@ npm create eth-test-account
 
 ###  What is the password?
 >"" (empty string)
+
 
 ### Do I need social media verification to use this?
 > Nope. Hopefully a thing of the past. Might need to adjust CAPCTHAs in the future.
