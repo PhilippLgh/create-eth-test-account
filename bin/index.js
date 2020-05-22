@@ -4,7 +4,7 @@ const path = require('path')
 const { prompt, Select } = require('enquirer')
 const chalk = require('chalk')
 const { getCaptcha, checkCaptcha, requestFunds } = require('../lib/faucet')
-const { getKeyfiles, generateAccount, exportWallet } = require('../lib/accounts')
+const { getKeyfiles, keystoreExists, generateAccount, exportWallet } = require('../lib/accounts')
 
 const getResponse = async prompt => {
   try {
@@ -61,7 +61,6 @@ const run = async () => {
   if (wallet) {
     console.log(chalk.bold(`Created new account: ${address}`))
   }
-
   console.log(chalk.bold('Generating CAPTCHA for quick check if you are human ;-)'))
   const { captcha, challenge } = await getCaptcha()
 
@@ -99,13 +98,26 @@ const run = async () => {
     console.log(chalk.red.bold('Server error', status, statusText, data))
     process.exit()
   }
-
   console.log('1 Ether is on the way...')
   console.log(`https://goerli.etherscan.io/tx/${txHash}`)
 
   if (wallet) {
+    let keyStore = keystoreExists()
+    let exportDir = process.cwd()
+    if (keyStore) {
+      let prompt = new Select({
+        name: 'accountLocation',
+        message: 'Where do you want to store the key?',
+        choices: [{
+          name: keyStore,
+          message: keyStore + chalk.bold(' (default keystore location)')
+        }, process.cwd]
+      });
+      let answer = await getResponse(prompt)
+      exportDir = answer
+    }
     const password = ''
-    const walletPath = await exportWallet(wallet, password)
+    const walletPath = await exportWallet(wallet, password, exportDir)
     console.log(chalk.bold('Wallet written to: ', walletPath))
   }
 
