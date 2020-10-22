@@ -3,7 +3,7 @@
 ## :unicorn: Fastest way to get setup with Ethereum :unicorn:
 
 ```shell
-npx create eth-test-account
+npm create eth-test-account
 ```
 
 💸💸💸 Get test Ether for the goerli testnet instantly! 💸💸💸
