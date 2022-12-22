@@ -17,6 +17,6 @@
     "chalk": "^4.0.0",
     "enquirer": "^2.3.5",
     "ethers": "^4.0.47",
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^9.0.0"
   }
 }
